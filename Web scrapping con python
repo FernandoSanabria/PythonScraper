@@ -1,0 +1,138 @@
+*** wEB SCRAPPING 
+
+http://quotes.toscrape.com
+http://toscrape.com
+http://books.toscrape.com
+
+// En consola de navegador
+
+
+$x('//h1/A/text()').map(x => x.wholeText)
+
+$x('//span/@class')
+
+$x('/html/body/div/div[1]')
+
+$x('/html/body/div/div[last()]')
+
+$x('//span[@class="text"]')
+
+$x('//span[@class="text"]/text()')
+
+* esta  linea extrae el texto de todos los span =0
+  $x('//span[@class="text"]/text()').map(x => x.wholeText)
+
+$x('//span[@class!="text"]')
+
+$x('/html/body/div/div[position()>1]')
+
+$x('//span[@class="text" and @class="tag"]')
+
+$x('//span[@class="text" or @class="tag"]')
+
+$x('//span[not(@class)]')
+
+$x('/*')
+
+$x('/html/*')
+
+$x('//*')
+
+$x('//span[@class="text"]/@*')
+
+$x('/html/body//div/@*')
+
+$x('//span[@class="text" and @itemprop="text"]')
+
+$x('//span[@class="text" and @itemprop="text"]/node()')
+
+$x('//small[@class="author" and starts-with(., "A")]/text()').map(x  => x.wholeText)
+
+$x('//small[@class="author" and contains(., "s")]/text()').map(x  => x.wholeText)
+
+$x('//small[@class="author" and ends-with(., "s")]/text()').map(x  => x.wholeText)
+
+$x('//small[@class="author" and matches(., "A.*n")]/text()').map(x  => x.wholeText)
+
+$x('/html/body/div/.')   ==> equivale a :  $x('/html/body/div/self::div')
+
+$x('/html/body/div/child::div')
+
+$x('/html/body/div/descendant::div')
+
+$x('/html/body/div/descendant-or-self::div')
+
+$x('//article[@class="product_pod"]/h3/a/@title')
+
+$x('//article[@class="product_pod"]/h3/a/@title').map(x => x.value)
+
+$x('//article[@class="product_pod"]/div[@class="product_price"]/p[@class="price_color"]/text()').map(x  => x.wholeText)
+
+$x('//div[@class="side_categories"]/ul[@class="nav nav-list"]/li/ul/li/a/text()').map(x => x.wholeText)
+
+$x('//article[@class="product_page"]/p/text()').map(x => x.wholeText)
+
+$x('//div[@class="col-sm-6 product_main"]/p[@class="instock availability"]/text()').map( x => x.wholeText) equivale a =>  $x('//div[@class="container-fluid page"]//article[@class="product_page"]/div[@class="row"]/div[@class="col-sm-6 product_main"]/p[@class="instock availability"]/text()').map( x => x.wholeText)
+
+// En la terminal linux
+
+
+sudo apt-get install -y python3-venv 
+
+python -m venv venv
+
+source venv/bin/activate
+
+// en virtual enviroment (venv)
+
+pip install requests lxml autopep8
+
+
+$x('//h2[@class="headline"]/a/@href').map(x => x.value)
+
+autopep8 --in-place --aggressive --aggressive scraper.py 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
